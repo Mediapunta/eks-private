@@ -13,3 +13,46 @@ AWS가 관리하는 Control Plane과 Worker Node가 연결되기 위해서는 �
  - S3 API용 엔드포인트 (G/W Endpoint)
  - ECR API 엔드포인트
  - Docker Registry API 엔드포인트
+
+1. eks-private-module로 이동
+2. 모듈 설치 `terraform init`
+3. terraform plan / apply 실행하면 EKS 클러스터 및 노드 생성
+   * root module(main.tf)에서 변수태그를 수정하여 클러스터 이름 수정
+
+
+./eks-private-module
+├── init.tf
+├── main.tf
+└── modules
+    ├── cluster
+    │   ├── cluster.tf
+    │   ├── output.tf
+    │   └── var.tf
+    ├── iam
+    │   ├── iam.tf
+    │   ├── output.tf
+    │   └── var.tf
+    ├── networking
+    │   ├── endpoint
+    │   │   ├── endpoint.tf
+    │   │   └── var.tf
+    │   ├── route_table
+    │   │   ├── output.tf
+    │   │   ├── rt.tf
+    │   │   └── var.tf
+    │   ├── subnet
+    │   │   ├── output.tf
+    │   │   ├── subnet.tf
+    │   │   └── var.tf
+    │   └── vpc
+    │       ├── output.tf
+    │       ├── var.tf
+    │       └── vpc.tf
+    ├── node
+    │   ├── node.tf
+    │   ├── output.tf
+    │   └── var.tf
+    └── securitygroup
+        ├── securitygroup.tf
+        ├── output.tf
+        └── var.tf
