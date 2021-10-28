@@ -21,6 +21,7 @@ AWS가 관리하는 Control Plane과 Worker Node가 연결되기 위해서는 �
 
 
 ./eks-private-module
+```bash
 ├── init.tf
 ├── main.tf
 └── modules
@@ -56,3 +57,4 @@ AWS가 관리하는 Control Plane과 Worker Node가 연결되기 위해서는 �
         ├── securitygroup.tf
         ├── output.tf
         └── var.tf
+```
