@@ -1,0 +1,10 @@
+variable "cluster_name" {}
+variable "cluster_role_arn" {}
+variable "cluster_version" {}
+variable "subnet_ids" {}
+variable "cluster_sg" {}
+variable "endpoint_private" {}
+variable "endpoint_public" {}
+variable "tag_Name" {}
+variable "tag_Env" {}
+variable "tag_Owner" {}

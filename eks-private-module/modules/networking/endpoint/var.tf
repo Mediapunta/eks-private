@@ -1,0 +1,12 @@
+variable "vpc_id" {}
+variable "region" {}
+variable "subnet_ids" {}
+variable "route_table_ids" {}
+variable "tag_Name_endpoint_ec2_sg" {}
+variable "tag_Name_ec2_endpoint" {}
+variable "tag_Name_endpoint_ecr_sg" {}
+variable "tag_Name_s3_endpoint" {}
+variable "tag_Name_ecr_api_endpoint" {}
+variable "tag_Name_ecr_docker_endpoint" {}
+variable "tag_Env" {}
+variable "tag_Owner" {}
